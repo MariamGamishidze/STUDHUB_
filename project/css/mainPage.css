@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    }
+
+    .pt-serif-regular {
+        font-family: "PT Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .pt-serif-bold {
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+      .pt-serif-regular-italic {
+        font-family: "PT Serif", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .pt-serif-bold-italic {
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+/* General Styling */
+body {
+    background-color: #fdedec;
+    color: #7b241c;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cd8983;
+    padding: 10px;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.logo img {
+    width: 70px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+.search-bar {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.nav-right span {
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #7b241c;
+    border-radius: 50%;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Left Section */
+.left-section {
+    width: 70%;
+}
+
+/* Status Update Box */
+.post-box {
+    background-color: #e39b94;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color:  #7b241c;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.media-button {
+    background-color: #fdedec;
+    color:#7b241c;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Posts */
+.post {
+    background-color:#e39b94;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    background-color:#fdedec;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.post-actions button {
+    background-color: transparent;
+    border: none;
+    color: #7b241c;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Sidebar Chat */
+.sidebar {
+    width: 25%;
+    background-color:  #e39b94;
+    padding: 10px;
+    border-radius: 15px;
+    padding-bottom: 400px;
+  
+}
+
+.chat-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.sidebar-user {
+    width: 50px;
+    height: 50px;
+    background:#7b241c;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+   
+    
+}
