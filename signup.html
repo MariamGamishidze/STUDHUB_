@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudHub</title>
+    <link rel="stylesheet" href="signup.css">
+    <script>
+        // Function to automatically append @gmail.com when the user types "@"
+        function autoAppendGmail(event) {
+            let emailInput = event.target;
+            let emailValue = emailInput.value;
+
+            // Only append @gmail.com when "@" is typed and it doesn't already contain "@gmail.com"
+            if (emailValue.includes('@') && !emailValue.includes('@gmail.com')) {
+                emailInput.value = emailValue + 'gmail.com';
+            }
+
+            // If user deletes the email and removes everything, clear the @gmail.com part
+            if (emailValue === '') {
+                emailInput.value = '';
+            }
+        }
+
+        // Function to ensure that @gmail.com is removed if the user deletes the "@"
+        function handleDelete(event) {
+            let emailInput = event.target;
+            let emailValue = emailInput.value;
+
+            // If user removes everything, clear the input
+            if (emailValue.includes('@') && emailValue.slice(-10) === '@gmail.com' && emailValue.length > 10) {
+                emailInput.value = emailValue.slice(0, -10); // Remove the "@gmail.com"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Sign Up</h1>
+
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Faculty" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Course" required>
+            </div>
+
+            <div class="input-box">
+                <input type="date" required>
+            </div>
+
+            <div class="input-box">
+                <!-- Listen for input and handle the email logic -->
+                <input type="email" placeholder="Email" required 
+                    oninput="autoAppendGmail(event)" 
+                    onkeydown="handleDelete(event)">
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
